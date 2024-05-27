@@ -1,0 +1,81 @@
+import {Gallery, ImageRow} from "@/core/ui/components";
+import {Img} from "@/core/ui/elements";
+import {Container} from "@/core/ui/layers";
+
+export default function GalleryPage() {
+    return (
+        <>
+            <Container>
+                <Gallery>
+                    <ImageRow>
+                        <Img
+                            width={"100vw"}
+                            height={"30vw"}
+                            radius={32}
+                            src={
+                                "https://images.unsplash.com/photo-1650556443811-4f515ca1b1f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
+                            }
+                        />
+                        <Img
+                            width={"100vw"}
+                            height={"30vw"}
+                            radius={32}
+                            src={
+                                "https://images.unsplash.com/photo-1668434177416-525261283120?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1035&q=80"
+                            }
+                        />
+                    </ImageRow>
+                    <ImageRow>
+                        <Img
+                            width={"100vw"}
+                            height={"20vw"}
+                            radius={32}
+                            src={
+                                "https://images.unsplash.com/photo-1643874133310-60b5e9304e9e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1064&q=80"
+                            }
+                        />
+                        <Img
+                            width={"100vw"}
+                            height={"20vw"}
+                            radius={32}
+                            src={
+                                "https://images.unsplash.com/photo-1666797630713-f5a2e54d3d23?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDE5Nnw2c01WalRMU2tlUXx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=900&q=60"
+                            }
+                        />
+                        <Img
+                            width={"100vw"}
+                            height={"20vw"}
+                            radius={32}
+                            src={
+                                "https://images.unsplash.com/photo-1646330961359-a5d9c70793bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
+                            }
+                        />
+                    </ImageRow>
+                </Gallery>
+            </Container>
+
+            <Container>
+                <Gallery>
+                    <ImageRow>
+                        <Img
+                            width={"80%"}
+                            height={150}
+                            radius={100}
+                            src={
+                                "https://images.unsplash.com/photo-1598350739703-541338767c76?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+                            }
+                        />
+                        <Img
+                            width={"20%"}
+                            height={150}
+                            radius={100}
+                            src={
+                                "https://images.unsplash.com/photo-1598350741874-61be0adca588?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=900&q=60"
+                            }
+                        />
+                    </ImageRow>
+                </Gallery>
+            </Container>
+        </>
+    );
+}

@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* > * {
+    font-family: "Readex Pro", sans-serif;
+}
+
+@layer base {
+    html {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+        @apply m-0 block bg-surface p-0;
+    }
+}
+
+@layer components {
+    /*LANDING PAGE*/
+    .padding {
+        @apply p-[36px] lg:p-[60px];
+    }
+
+    .bg {
+        @apply bg-surface-container;
+    }
+
+    /*SLIDER WEBKIT (CHROME, SAFARI, OPERA...)*/
+    input[type="range"]::-webkit-slider-thumb {
+        @apply pointer-events-auto relative z-50 h-[20px] w-[20px] cursor-pointer appearance-none rounded-full border-0 bg-primary shadow-mm-1 hover:ring-[12px] hover:ring-surface-container-highest/30 focus:ring-[12px] focus:ring-surface-container-highest/30;
+    }
+
+    /*SLIDER FIREFOX*/
+    input[type="range"]::-moz-range-thumb {
+        @apply pointer-events-auto relative h-[20px] w-[20px] cursor-pointer appearance-none rounded-full border-0 bg-primary shadow-mm-1 outline-offset-1 hover:ring-[12px] hover:ring-surface-container-highest/30 focus:ring-[12px] focus:ring-surface-container-highest/30;
+    }
+
+    /*COMMON BUTTONS*/
+    .btn {
+        @apply relative flex h-[40px] w-max cursor-pointer items-center justify-center gap-[8px] overflow-hidden rounded-full px-[16px] py-[10px] text-label-large disabled:cursor-not-allowed disabled:opacity-30;
+    }
+
+    .filled {
+        @apply bg-primary text-on-primary hover:bg-primary-hover;
+    }
+
+    .tonal {
+        @apply bg-secondary text-on-secondary hover:bg-secondary-hover;
+    }
+
+    .outlined {
+        @apply border border-on-secondary text-on-secondary hover:bg-secondary-hover hover:backdrop-blur-sm;
+    }
+
+    .elevated {
+        @apply bg-surface-container-low text-on-secondary shadow-mm-1 hover:bg-secondary-hover hover:backdrop-blur-sm;
+    }
+
+    .text {
+        @apply text-on-secondary hover:bg-secondary-hover hover:backdrop-blur-sm;
+    }
+
+    .standard {
+        @apply cursor-pointer text-on-surface hover:bg-surface-container-highest hover:text-on-surface;
+    }
+
+    /*ICON BUTTONS*/
+    .iconBtn {
+        @apply m-[0px]  flex max-h-[40px] max-w-[40px] items-center justify-center gap-[12px] rounded-full p-[8px] disabled:cursor-not-allowed disabled:opacity-30;
+    }
+
+    /*FABs*/
+    .fab {
+        @apply flex h-[56px] w-[56px] items-center gap-[12px] rounded-large px-[16px] py-[16px];
+    }
+
+    .fabSmall {
+        @apply flex h-[40px] w-[40px] items-center gap-[12px] rounded-medium px-[8px] py-[8px];
+    }
+
+    .fabLarge {
+        @apply flex h-[96px] w-[96px] items-center justify-center gap-[12px] rounded-large px-[30px] py-[30px];
+    }
+
+    .fabExtended {
+        @apply flex h-[56px] w-max items-center justify-center gap-[12px] rounded-large px-[16px] py-[16px] text-label-large;
+    }
+
+    .surface {
+        @apply bg-primary text-on-primary hover:bg-primary-hover disabled:opacity-30;
+    }
+
+    .secondary {
+        @apply bg-secondary text-on-secondary hover:bg-secondary-hover disabled:opacity-30;
+    }
+
+    .tertiary {
+        @apply bg-tertiary text-on-tertiary hover:bg-tertiary-hover;
+    }
+
+    /*BADGES*/
+    .badge {
+        @apply flex h-[20px] w-max cursor-pointer items-center gap-[4px] rounded-full bg-error px-[6px] py-[6px] text-label-small text-on-error;
+    }
+
+    .dotBadge {
+        @apply flex h-[12px] w-[12px] cursor-pointer rounded-full bg-error px-[4px] py-[4px] text-on-error;
+    }
+
+    .onIconBadge {
+        @apply absolute flex min-h-[8px] min-w-[8px] cursor-pointer rounded-full bg-error px-[4px] text-label-small text-on-error;
+    }
+
+    /*CHIPS*/
+    .chips {
+        @apply flex h-[32px] w-max cursor-pointer items-center gap-[8px] rounded-small bg-surface-container-low px-[8px] text-label-large text-on-surface hover:bg-surface-container-lowest disabled:opacity-30;
+    }
+}
