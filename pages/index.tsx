@@ -26,7 +26,7 @@ export default function Home() {
             attribute="class">
             <main className={`flex h-screen flex-col items-center justify-center gap-[24px] px-[24px] text-center ${outfit.className}`}>
                 <div>👋 Hi, welcome to</div>
-                <div className="text-center text-5xl text-sky-800">Mauricio's portolio</div>
+                <div className="text-center text-5xl text-sky-800">Mauricio&apos;s portolio</div>
 
                 <section id="apps" className="mt-30">
                     <div className="grid grid-cols-5 gap-4">
@@ -35,6 +35,7 @@ export default function Home() {
                                 imageUrl={card.imageUrl}
                                 boldText={card.boldText}
                                 normalText={card.normalText}
+                                key={index}
                             />
                         ))}
                     </div>
